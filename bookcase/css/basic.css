@@ -10,7 +10,8 @@
     /*top mid bottom을 세로로해서*/
     justify-content: space-between;
     /*위 중간 아래로 정렬*/
-    background: url(../images/background.jpeg);
+    /* background: url(../images/background.jpeg); */
+    background: url(../images/background.jpeg) center center /100% no-repeat;
     /* background-size: cover; */
     /*헤더 이미지*/
     width: 100%;
