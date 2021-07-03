@@ -1,0 +1,178 @@
+.main{
+    border: 5px solid blue;
+    width: 100%;
+    height:358px;
+    background-color: white;
+    text-align: center;
+}
+.under{
+    border: 5px solid blue;
+    width: 100%;
+    height: 160px;
+    background-color: white;
+    text-align: center;
+}
+#left_arrow{
+    top: 160px;
+    left: 2%;
+    position: absolute;
+}
+#right_arrow{
+    top: 160px;
+    right: 2%;
+    position: absolute;
+}
+#button{
+    text-align: center;
+    width: 150px;
+    height: 60px;
+    background-color: rgb(125, 201, 251);
+    top: 1400px;
+    left: 45%;
+    padding: 20px 0px 0px 0px;
+}
+#b1{
+    top: 35px;
+    left: 9%;
+    text-align: center;
+    animation: fadein 1s;
+    -webkit-keyframes: fadein 1s;
+}
+#b2{
+    top: 35px;
+    left: 40%;
+    animation: fadein 1s;
+    -webkit-keyframes: fadein 1s;
+}
+#b3{
+    top: 35px;
+    left: 70%;
+    animation: fadein 1s;
+    -webkit-keyframes: fadein 1s;
+}
+.img{
+    top: 100px;
+    left: 6%;
+    height: 100px;
+    width: 700px;
+    height: 100px;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#q1{
+    top: 200px;
+    left: 6%;
+    background-color: rgb(255, 228, 119);
+    animation: fadein 3s;
+    -webkit-keyframes: fadein 3s;
+}
+#q2{
+    top: 600px;
+    right: 6%;
+    background-color: rgb(134, 186, 221);
+    animation: fadein 4s;
+    -webkit-keyframes: fadein 4s;
+}
+#q3{
+    top: 1000px;
+    left: 6%;
+    background-color: rgb(229, 190, 244);
+    animation: fadein 5s;
+    -webkit-keyframes: fadein 5s;
+}
+
+#happy{
+    top: 160px;
+    left: 13%;
+    position: absolute;
+    text-align: center;
+}
+#angry{
+    top: 160px;
+    left: 33%;
+    position: absolute;
+    text-align: center;
+}
+#anx{
+    top: 160px;
+    left: 53%;
+    position: absolute;
+    text-align: center;
+}
+#worr{
+    top: 160px;
+    left: 73%;
+    position: absolute;
+    text-align: center;
+}
+
+#family{
+    top: 160px;
+    left: 4%;
+    position: absolute;
+    text-align: center;
+}
+#friend{
+    top: 160px;
+    left: 24%;
+    position: absolute;
+    text-align: center;
+}
+#boss{
+    top: 160px;
+    left: 44%;
+    position: absolute;
+    text-align: center;
+}
+#test{
+    top: 160px;
+    left: 64%;
+    position: absolute;
+    text-align: center;
+}
+
+#accident{
+    top: 160px;
+    left: 84%;
+    position: absolute;
+    text-align: center;
+}
+
+#disappointed{
+    top: 160px;
+    left: 4%;
+    position: absolute;
+    text-align: center;
+}
+#sad{
+    top: 160px;
+    left: 24%;
+    position: absolute;
+    text-align: center;
+}
+#betrayal{
+    top: 160px;
+    left: 44%;
+    position: absolute;
+    text-align: center;
+}
+#unfairness{
+    top: 160px;
+    left: 64%;
+    position: absolute;
+    text-align: center;
+}
+
+#jealousy{
+    top: 160px;
+    left: 84%;
+    position: absolute;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}

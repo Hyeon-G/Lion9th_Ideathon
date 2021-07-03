@@ -1,0 +1,142 @@
+
+main{
+    /* margin: 10px 10%; */
+    /* margin: 2% 10%; */
+    margin: 2% 18%;
+}
+.chatt_list{
+    /* border: 5px solid red; */
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-around;
+
+
+}
+.chatt_list>div{
+    /* border: 3px solid blue; */
+}
+.review_contents{
+    margin-left: 3%;
+    width: 60%;
+    padding: 2%;
+}
+#writer{
+    padding: 1%;
+    text-align: right;
+    font-weight: bold;
+}
+.chatting{
+    margin: 10px 0px;
+    /* border: 5px solid blue; */
+}
+.chatt_header{
+    background-color: #C389DA;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 1%;
+    margin-bottom: 2%;
+}
+.chatt_body{
+    margin: 5px 5%;
+    padding: 3% 0%;
+}
+.hr-sect {
+	display: flex;
+	/* flex-basis: 100%; */
+    /* width: 100%; */
+	align-items: center;
+	color: rgba(0, 0, 0);
+	font-size: 16px;
+	/* margin: px 0px; */
+}
+.hr-sect::before,.hr-sect::after {
+	content: "";
+	flex-grow: 1;
+	background: rgba(0, 0, 0, 0.35);
+	height: 1px;
+	font-size: 0px;
+	line-height: 0px;
+	margin: 0px 16px;
+}
+.messages{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-start;
+    
+}
+.profil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.writerMsg{
+    margin: 5px auto 10px 5px;
+    display: flex;
+    /* justify-content: flex-start; */
+}
+.ballon{
+    position: relative;
+    background-color: #FEEE8F;
+    border-radius: 10px;
+    padding: 10px;
+    line-height: 2rem;
+    margin:  8px 15px;
+    /* margin-bottom: 8px; */
+}
+.writer_ballon::before{
+    border-right: 10px solid #FEEE8F;
+    border-bottom: 10px solid transparent;
+    content:"";
+    position:absolute;
+    top:10px;
+    left:-10px;
+}
+.userMsg{
+    /* align-items: flex-start; */
+    margin: 5px 5px 10px auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+.user_ballon::after{
+    border-left: 10px solid #fff534;
+    border-bottom: 10px solid transparent;
+    content:"";
+    position:absolute;
+    top:4px;
+    right:-8px;
+}
+.chatt_footer{
+    background-color: #C389DA;
+    display: flex;
+    padding:20px 5%;
+    justify-content: flex-end;
+    align-items: stretch;
+    
+}
+
+#chatt_text{
+    display: block;
+    padding:10px;
+    width:100%;
+    height: 100%; 
+    outline: none;
+    border-style: none;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+button{
+    background-color: #FEEE8F;
+    border: 0px solid;
+    border-radius: 5px;
+    font-weight:bold;
+    font-size: 1rem;
+    margin-left: 15px;
+    padding: 0 1%;
+
+}

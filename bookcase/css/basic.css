@@ -1,0 +1,175 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*헤더스타일*/
+.header {
+    display: flex;
+    flex-direction: column;
+    /*top mid bottom을 세로로해서*/
+    justify-content: space-between;
+    /*위 중간 아래로 정렬*/
+    background: url(../images/background.jpeg);
+    /* background-size: cover; */
+    /*헤더 이미지*/
+    width: 100%;
+    height: 360px;
+    /* margin: 0% 10%; */
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    /*(홈,마이페이지,책추천받기,리뷰페이지,책정보,메신저)-(회원가입)*/
+}
+
+.menu {
+    display: inline-flex;
+    /*메뉴들을 가로로 나열*/
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    /*a태그 밑줄제거*/
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 46px;
+    /*공통*/
+}
+
+/*투명박스는 현재 선택안된 메뉴만 표시*/
+#home {
+    /*home은 선택된 메뉴 >> 투명박스 제거*/
+    /* background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)); */
+    width: 70px;
+}
+
+#my-page,
+#book-recommend,
+#book-review {
+    /*5글자 메뉴*/
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    width: 130px;
+}
+
+#book-info,
+#messenger {
+    /*3글자 메뉴*/
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    width: 100px;
+}
+
+.signup {
+    padding-right: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    /*반투명색 박스*/
+    width: 100%;
+    height: 46px;
+}
+
+.signup a {
+    color: white;
+    text-decoration: none;
+    /*a태그 밑줄제거*/
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
+    /*우측 끝에 정렬*/
+    align-items: center;
+    /*위아래 중앙정렬*/
+}
+
+.signup img {
+    margin-left: 10px;
+    border-radius: 50%;
+    /*프로필 이미지 둥글게*/
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    /*좌우 중앙정렬*/
+    align-items: center;
+    /*위아래 중앙정렬*/
+    color: rgb(165, 109, 188);
+}
+
+.phrase {
+    color: rgb(165, 109, 188);
+    text-align: center;
+    /*제목 중앙정렬*/
+}
+
+.search {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    /*반투명색 박스*/
+    width: 100%;
+    height: 93px;
+    text-align: center;
+    /*가로방향 중앙정렬*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*세로방향 중앙정렬*/
+}
+
+.search form input {
+    font-size: 16px;
+    width: 700px;
+    height: 41px;
+}
+
+.search form button {
+    font-size: 16px;
+    color: white;
+    /*버튼 글자색*/
+    width: 100px;
+    height: 44px;
+    border-radius: 10%;
+    /*버튼둥글게*/
+    background-color: rgb(165, 109, 188);
+    /*버튼색*/
+}
+
+
+
+
+
+
+/*여기서부터 푸터 스타일*/
+.footer {
+    width: 100%;
+    height: 155px;
+    /* margin: 0 10%; */
+    background-color: rgb(224, 224, 224);
+}
+
+.footer a {
+    text-decoration: none;
+    /*a태그 밑줄 제거*/
+    color: black;
+}
+
+.footer .top {
+    display: flex;
+    justify-content: left;
+    /*좌측 정렬*/
+    align-items: center;
+    /*위아래 중앙정렬*/
+}
+
+.footer .top img {
+    margin: 15px 25px;
+}
+
+.footer .bottom {
+    display: flex;
+    justify-content: space-between;
+    /*좌우 띄우고 정렬*/
+    margin: 0px 20px;
+
+}
