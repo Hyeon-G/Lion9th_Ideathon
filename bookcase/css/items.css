@@ -1,178 +1,208 @@
-.main{
-    border: 5px solid blue;
-    width: 100%;
-    height:358px;
-    background-color: white;
-    text-align: center;
+main{
+    margin: 2% 10%;
 }
-.under{
-    border: 5px solid blue;
-    width: 100%;
-    height: 160px;
-    background-color: white;
-    text-align: center;
-}
-#left_arrow{
-    top: 160px;
-    left: 2%;
-    position: absolute;
-}
-#right_arrow{
-    top: 160px;
-    right: 2%;
-    position: absolute;
-}
-#button{
-    text-align: center;
-    width: 150px;
-    height: 60px;
-    background-color: rgb(125, 201, 251);
-    top: 1400px;
-    left: 45%;
-    padding: 20px 0px 0px 0px;
-}
-#b1{
-    top: 35px;
-    left: 9%;
-    text-align: center;
-    animation: fadein 1s;
-    -webkit-keyframes: fadein 1s;
-}
-#b2{
-    top: 35px;
-    left: 40%;
-    animation: fadein 1s;
-    -webkit-keyframes: fadein 1s;
-}
-#b3{
-    top: 35px;
-    left: 70%;
-    animation: fadein 1s;
-    -webkit-keyframes: fadein 1s;
-}
-.img{
-    top: 100px;
-    left: 6%;
-    height: 100px;
-    width: 700px;
-    height: 100px;
-    position: absolute;
-    overflow: hidden;
+.section{
     display: flex;
+    flex-direction: column;
     align-items: center;
+}
+/* cardlist */
+.section input[id*="slide"]{
+    display: none;
+}
+.section .slidewrap{
+    /* background-color: cornflowerblue; */
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.section .slidelist {
+    white-space: nowrap;
+}
+.section .slidelist > li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    transition: all 0.5s;
+}
+.section .slidelist > li > a{
+    display: block;
+    position: relative;
+    /* overflow: hidden; */
+}
+.cardlist{
+    display: flex;
     justify-content: center;
 }
-#q1{
-    top: 200px;
-    left: 6%;
-    background-color: rgb(255, 228, 119);
-    animation: fadein 3s;
-    -webkit-keyframes: fadein 3s;
+.card{
+    font-size: 1rem;
+    border-radius: 50px;
+    margin: 2%;
+    width: 300px;
+    height: 300px;
+    box-shadow: 10px 10px 10px #909090;
+    padding: 1% 2%;
+    box-sizing: border-box;
+    /* 중앙정렬 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
 }
-#q2{
-    top: 600px;
-    right: 6%;
-    background-color: rgb(134, 186, 221);
-    animation: fadein 4s;
-    -webkit-keyframes: fadein 4s;
+.card>*{
+    white-space:pre-wrap;
 }
-#q3{
-    top: 1000px;
-    left: 6%;
-    background-color: rgb(229, 190, 244);
-    animation: fadein 5s;
-    -webkit-keyframes: fadein 5s;
+.card>h2{margin: 2%;}
+.cardbook{
+    color: #233e99;
+    /* font-family: 'hanna'; */
+    line-height: 10%;
+}
+.cardreview{color: #B364CA;}
+.cardman{color: #FFA500;}
+
+.section .slidelist label{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    padding:50px;
+    cursor: pointer;
+}
+.section .slidelist .left{
+    left: -20px;
+    background:url(../images/left-arrow.png) center center/100% no-repeat;
+}
+.section .slidelist .right{
+    right: -20px;
+    background: url(../images/right-arrow.png) center center / 100% no-repeat;
+}
+.section input[id="slide01"]:checked~ .slidewrap .slidelist > li{transform: translateX(0%);}
+.section input[id="slide02"]:checked~ .slidewrap .slidelist > li{transform: translateX(-100%);}
+.section input[id="slide03"]:checked~ .slidewrap .slidelist > li{transform: translateX(-200%);}
+
+/* /cardlist */
+.formcontainer{
+    color: #503F00;
+    display: flex; 
+    flex-direction: column; 
+    margin: 1% 5%;
+}
+.emotionform input[id*="em"]{display: none;}
+.emotionform input[id*="ca"]{display: none;}
+.emotionform input[id*="feel"]{display: none;}
+/* emotion */
+#happy{background: url(../images/emotions/happy.png) center center/100% no-repeat;}
+#angry{background: url(../images/emotions/angry.png) center center/100% no-repeat;}
+#sad{background: url(../images/emotions/sad.png) center center/100% no-repeat;}
+#anx{background: url(../images/emotions/anxious.png) center center/100% no-repeat;}
+#dep{background: url(../images/emotions/depressed.png) center center/100% no-repeat;}
+/* cause */
+#family{background: url(../images/cause/family.png) center center/100% no-repeat;}
+#friends{background: url(../images/cause/friend.png) center center/100% no-repeat;}
+#upper{background: url(../images/cause/organization.png) center center/100% no-repeat;}
+#exam{background: url(../images/cause/books.png) center center/100% no-repeat;}
+#accid{background: url(../images/cause/blood-pressure.png) center center/100% no-repeat;}
+/* feel */
+#feelA{background: url(../images/emotions/depressed.png) center center/100% no-repeat;}
+#feelB{background: url(../images/emotions/shouting.png) center center/100% no-repeat;}
+#feelC{background: url(../images/main/angry.png) center center/100% no-repeat;}
+#feelD{background: url(../images/emotions/sad.png) center center/100% no-repeat;}
+#feelE{background: url(../images/emotions/bored.png) center center/100% no-repeat;}
+
+.emotionform{
+    width: 800px;
+    background: #FFE477;
+    border-radius: 25px;
+    padding:2%;
+    margin: 2% 0%;
+
+}
+.emotionicon{
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 2%;
+}
+.emotionicon>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.emotionicon>div>p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.icon{
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    /* padding: 40px; */
+    cursor: pointer;
+}
+.select{
+    display: block;
+    width: 10px;
+    height: 10px; 
+    padding: 5px;
+    border: 0px solid blueviolet; 
+    border-radius: 50px; 
+    background: rgb(248, 246, 230);
+    /* margin: 10px; */
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+/* 감정 */
+.emotionform input[id="em01"]:checked ~ .emotionicon >div:nth-child(1)>label{background: blueviolet;}
+.emotionform input[id="em02"]:checked ~ .emotionicon >div:nth-child(2)>label{background: blueviolet;}
+.emotionform input[id="em03"]:checked ~ .emotionicon >div:nth-child(3)>label{background: blueviolet;}
+.emotionform input[id="em04"]:checked ~ .emotionicon >div:nth-child(4)>label{background: blueviolet;}
+.emotionform input[id="em05"]:checked ~ .emotionicon >div:nth-child(5)>label{background: blueviolet;}
+/* 원인 */
+.emotionform input[id="ca01"]:checked ~ .emotionicon >div:nth-child(1)>label{background: blueviolet;}
+.emotionform input[id="ca02"]:checked ~ .emotionicon >div:nth-child(2)>label{background: blueviolet;}
+.emotionform input[id="ca03"]:checked ~ .emotionicon >div:nth-child(3)>label{background: blueviolet;}
+.emotionform input[id="ca04"]:checked ~ .emotionicon >div:nth-child(4)>label{background: blueviolet;}
+.emotionform input[id="ca05"]:checked ~ .emotionicon >div:nth-child(5)>label{background: blueviolet;}
+/* feeling */
+.emotionform input[id="feel01"]:checked ~ .emotionicon >div:nth-child(1)>label{background: blueviolet;}
+.emotionform input[id="feel02"]:checked ~ .emotionicon >div:nth-child(2)>label{background: blueviolet;}
+.emotionform input[id="feel03"]:checked ~ .emotionicon >div:nth-child(3)>label{background: blueviolet;}
+.emotionform input[id="feel04"]:checked ~ .emotionicon >div:nth-child(4)>label{background: blueviolet;}
+.emotionform input[id="feel05"]:checked ~ .emotionicon >div:nth-child(5)>label{background: blueviolet;}
+
+#first{
+    align-self: flex-start;
+    box-shadow: 10px 10px 10px #909090;
+    z-index: 10;
+    margin-top: 0;
+}
+#second{
+    align-self: flex-end;
+    background-color: #FFB43D;
+    box-shadow:-10px 10px 10px #909090;
+}
+#third{
+    align-self: flex-start;
+    background-color: #E8AFFF;
+    box-shadow: 10px 10px 10px #909090;
 }
 
-#happy{
-    top: 160px;
-    left: 13%;
-    position: absolute;
+#submit{
+    /* 글씨 */
+    font-size: 3rem;
+    font-weight: bold;
     text-align: center;
-}
-#angry{
-    top: 160px;
-    left: 33%;
-    position: absolute;
-    text-align: center;
-}
-#anx{
-    top: 160px;
-    left: 53%;
-    position: absolute;
-    text-align: center;
-}
-#worr{
-    top: 160px;
-    left: 73%;
-    position: absolute;
-    text-align: center;
-}
-
-#family{
-    top: 160px;
-    left: 4%;
-    position: absolute;
-    text-align: center;
-}
-#friend{
-    top: 160px;
-    left: 24%;
-    position: absolute;
-    text-align: center;
-}
-#boss{
-    top: 160px;
-    left: 44%;
-    position: absolute;
-    text-align: center;
-}
-#test{
-    top: 160px;
-    left: 64%;
-    position: absolute;
-    text-align: center;
-}
-
-#accident{
-    top: 160px;
-    left: 84%;
-    position: absolute;
-    text-align: center;
-}
-
-#disappointed{
-    top: 160px;
-    left: 4%;
-    position: absolute;
-    text-align: center;
-}
-#sad{
-    top: 160px;
-    left: 24%;
-    position: absolute;
-    text-align: center;
-}
-#betrayal{
-    top: 160px;
-    left: 44%;
-    position: absolute;
-    text-align: center;
-}
-#unfairness{
-    top: 160px;
-    left: 64%;
-    position: absolute;
-    text-align: center;
-}
-
-#jealousy{
-    top: 160px;
-    left: 84%;
-    position: absolute;
-    text-align: center;
-}
-
-a{
-    text-decoration: none;
+    color: #503F00;
+    /* 버튼 모양*/
+    background-color: #7DC9FB;
+    border-radius: 20px;
+    width: 200px;
+    padding: 1.5%;
+    /* 위치 */
+    align-self: center;
+    margin: 2% auto;
+    /* 그림자 */
+    box-shadow: 5px 8px 10px #909090;
 }

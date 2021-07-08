@@ -1,7 +1,4 @@
-
 main{
-    /* margin: 10px 10%; */
-    /* margin: 2% 10%; */
     margin: 2% 10%;
 }
 .chatt_list{
@@ -126,7 +123,7 @@ main{
     border-radius: 8px;
     box-sizing: border-box;
 }
-button{
+.chatbtn{
     background-color: #FEEE8F;
     border: 0px solid;
     border-radius: 5px;

@@ -1,42 +1,15 @@
 main{
     margin: 2% 10%;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+/* cardlist */
+.section{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-/* card */
-.parent{
-    position: relative;
-    width: 100%;
-    height: 400px;
-}
-.parent2{        
-    position: relative;
-    width: 100%;
-    height: 1600px;
-}
-.box{
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    padding: 10px 10px 10px 10px;
-    text-align: center;
-    box-shadow: 5px 5px 5px 5px gray;
-    border-radius: 15px;
-}
-.box2{
-    width: 700px;
-    height: 300px;
-    border: 1px solid lightblue;
-    position: absolute;
-    padding: 10px 10px 10px 10px;
-    border-radius: 15px;
-    box-shadow: 5px 5px 5px 5px gray;
-}
-/* /card */
-
-
-/* cardtest */
 .section input[id*="slide"]{
     display: none;
 }
@@ -48,7 +21,6 @@ main{
 }
 .section .slidelist {
     white-space: nowrap;
-    font-size: 0;
 }
 .section .slidelist > li {
     display: inline-block;
@@ -59,12 +31,39 @@ main{
 .section .slidelist > li > a{
     display: block;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
-.section .slidelist > li > a img{
-    width: 100%;
-    /* background-color: coral; */
+.cardlist{
+    display: flex;
+    justify-content: center;
 }
+.card{
+    font-size: 1rem;
+    border-radius: 50px;
+    margin: 2%;
+    width: 300px;
+    height: 300px;
+    box-shadow: 10px 10px 10px #909090;
+    padding: 1% 2%;
+    box-sizing: border-box;
+    /* 중앙정렬 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+}
+.card>*{
+    white-space:pre-wrap;
+}
+.card>h2{margin: 2%;}
+.cardbook{
+    color: #233e99;
+    /* font-family: 'hanna'; */
+    line-height: 10%;
+}
+.cardreview{color: #B364CA;}
+.cardman{color: #FFA500;}
+
 .section .slidelist label{
     position: absolute;
     z-index: 1;
@@ -74,21 +73,24 @@ main{
     cursor: pointer;
 }
 .section .slidelist .left{
-    left: 30px;
+    left: -20px;
     background:url(../images/left-arrow.png) center center/100% no-repeat;
 }
 .section .slidelist .right{
-    right: 30px;
+    right: -20px;
     background: url(../images/right-arrow.png) center center / 100% no-repeat;
 }
 .section input[id="slide01"]:checked~ .slidewrap .slidelist > li{transform: translateX(0%);}
 .section input[id="slide02"]:checked~ .slidewrap .slidelist > li{transform: translateX(-100%);}
 .section input[id="slide03"]:checked~ .slidewrap .slidelist > li{transform: translateX(-200%);}
-/* /cardtest */
+
+/* /cardlist */
+
 .recomand{
     display: flex;
     justify-content: center;
     padding: 1%;
+    margin-top: 3%;
 }
 .item{
     /* border: 2px solid black; */
@@ -102,10 +104,12 @@ main{
 
 #name{
     font-size: 2rem;
+    font-weight: bold;
 }
 .book_container{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    /* justify-content: center; */
 }
 .book_item{
     display: flex;
@@ -119,7 +123,7 @@ main{
     /* border-radius: 15px; */
     box-shadow: 8px 5px 5px 5px #909090;
 }
-h3{
+.book_item h3{
     text-align: center;
     /* border: 1px solid red; */
     margin-top: 8%;
@@ -149,7 +153,14 @@ input[id*="heart"]:checked ~ .heart{
     background: url(../images/red_heart.png) center center /50% no-repeat;
     background-color: #C389DA;
 }
-
+.last{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem; 
+    color: #553607; 
+    padding: 3%;
+}
 .more_book{
     /* line-height: 1.5rem; */
     font-weight: bold;

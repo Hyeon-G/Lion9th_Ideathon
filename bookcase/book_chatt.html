@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bookbox</title>
+    <title>부크박스BOOKBOX</title>
     <link rel="stylesheet" href="css/book_chatt.css">
     <link rel="stylesheet" href="css/basic.css">
     <style>
+        @font-face {
+            font-family: 'hanna';
+            src: url('font/BMHANNAPRO.TTF') format('truetype');
+        }
+        @font-face {
+            font-family: 'hanna2';
+            src: url('font/BMHANNA_11YRS_TTF.TTF') format('truetype');
+        }
         body{
             padding: 0;
             margin: 0;
@@ -19,16 +27,16 @@
     <div class="header">
         <div class="top">
             <div class="menu">
-                <a id="home" href="index.html"><img src="images/home.png" alt="home-icon" width="40px"></a>
+                <a id="home" href="main.html"><img src="images/home.png" alt="home-icon" width="40px"></a>
                 <a id="my-page" href="#">마이페이지</a>
-                <a id="book-recommend" href="#">책추전받기</a>
+                <a id="book-recommend" href="#">책추천받기</a>
                 <a id="book-review" href="#">리뷰페이지</a>
                 <a id="book-info" href="#">책정보</a>
-                <a id="messenger" href="book_chatt.html">메신저</a>
+                <a id="messenger" href="chatlist.html">메신저</a>
             </div>
             <div class="signup">
                 <a id="none-choosed" href="#">
-                    회원가입
+                    홍길동 님
                     <img src="images/profile.png" alt="profile-icon" width="35px">
                 </a>
             </div>
@@ -37,34 +45,34 @@
         <div class="mid">
             <div class="title">
                 <br>
-                <div style="margin-right: 1%;">
-                    <h1><img src="images/book-color.png" alt="book-icon" width="60px" height="65px"></h1>
+                <div style="margin-right:1%;">
+                    <a href="#"><img src="images/book-color.png" alt="book-icon" width="60px" height="65px"></a>
                 </div>
                 <div>
-                    <h1>부크박스(BookBox)</h1>
+                    <a  style="font-family: 'hanna'; font-size: 40px; color: rgb(165, 109, 188);">부크박스(BookBox)</a>
                 </div>
             </div>
             <div class="phrase">
-                <h2>환영합니다! 어떤 책을 들려드릴까요?</h2>
+                <p style="font-family: 'hanna2'; font-size: 25px;">환영합니다! 어떤 책을 들려드릴까요?</p>
             </div>
         </div>
 
         <div class="bottom">
             <div class="search">
                 <form action="#">
-                    <input type="text" placeholder=" 찾고싶은 책을 검색해보세요!">
+                    <input type="text" placeholder="   찾고 싶은 책을 검색해보세요!">
                     <button>검색</button>
                 </form>
             </div>
         </div>
-    </div> 
+    </div>
     <!-- /header -->
     <main>
         <div class="chatt_list">
             <div><img src="images/도서책.PNG" alt="작은별"></div>
             <div class="review_contents">
                 <div style="display:flex;padding-bottom: 2%;">
-                    <h2 style="margin-right: 2%;">작은별이지만 빛나고 있어</h2>
+                    <h2 style="margin-right: 2%;">작은 별이지만 빛나고 있어</h2>
                     <img src="images/chat.png" alt="채팅아이콘" width="30" height="30" style="vertical-align: middle;">
                 </div>
                 
@@ -73,7 +81,7 @@
             </div>
         </div>
         <div class="chatting">
-            <div class="chatt_header">작은별이지만 빛나고있어</div>
+            <div class="chatt_header">작은 별이지만 빛나고있어</div>
             <div class="hr-sect">채팅을 시작합니다</div>
             <div class="chatt_body">
                 
@@ -84,9 +92,9 @@
                             <span>김멋사</span>
                         </div>
                         <div>
-                            <div class="ballon writer_ballon">안녕하세요  "작은별이지만 빛나고있어" 리뷰 남긴 김멋사 입니다</div>
-                            <div class="ballon writer_ballon">안녕하세요  작은별이지만 빛나고있어 리뷰 남긴 김멋사 입니다</div>
-                            <div class="ballon writer_ballon">안녕하세요  작은별이지만 빛나고있어 리뷰 남긴 김멋사 입니다</div>
+                            <div class="ballon writer_ballon">안녕하세요  "작은 별이지만 빛나고있어" 리뷰 남긴 김멋사 입니다</div>
+                            <div class="ballon writer_ballon">"작은 별이지만 빛나고 있어"를 읽은 소감을 채팅으로 같이 공유해요!</div>
+                            <div class="ballon writer_ballon">저는 책을 읽고 작은 별에게 위로를 받았습니다</div>
                         </div>
                         
                     </div>
@@ -95,13 +103,13 @@
                             <img src="images/girl.png" alt="프로필사진" width="60" height="60">
                             <span>이호랑</span>
                         </div>
-                        <div class=" ballon user_ballon">안녕하세요  작은별이지만 빛나고있어 리뷰 남긴 김멋사 입니다</div>
+                        <div class=" ballon user_ballon">안녕하세요 이호랑 입니다</div>
                     </div>
                 </ul>
             </div>
             <div class="chatt_footer">
                 <input id="chatt_text" type="text" placeholder="채팅을 입력해주세요">
-                <button>SEND</button>
+                <button class="chatbtn">SEND</button>
             </div>
         </div>
     </main>

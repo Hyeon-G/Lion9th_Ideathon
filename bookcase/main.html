@@ -4,257 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>북크박스</title>
+    <title>부크박스BOOKBOX</title>
     <link rel="stylesheet" type="text/css" href="css/items.css">
+    <link rel="stylesheet" href="css/basic.css">
     <style>
-        @font-face {
-            font-family: 'hanna2';
-            src: url('font/BMHANNA_11YRS_TTF.TTF') format('truetype');
-        } 
         @font-face {
             font-family: 'hanna';
             src: url('font/BMHANNAPRO.TTF') format('truetype');
-        }   
-        @font-face {
-            font-family: 'jua';
-            src: url('font/BMJUA_ttf.ttf') format('truetype');
-        } 
-        
-        @-webkit-keyframes fadein { /* Safari and Chrome */
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
         }
-        @keyframes fadein {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }  
+        @font-face {
+            font-family: 'hanna2';
+            src: url('font/BMHANNA_11YRS_TTF.TTF') format('truetype');
+        }
         body{
+            padding: 0;
             margin: 0;
         }
-        .parent{
-            position: relative;
-            width: 100%;
-            height: 400px;
-        }
-        .parent2{        
-            position: relative;
-            width: 100%;
-            height: 1600px;
-        }
-        .box{
-            width: 300px;
-            height: 300px;
-            position: absolute;
-            padding: 10px 10px 10px 10px;
-            text-align: center;
-            box-shadow: 5px 5px 5px 5px gray;
-            border-radius: 15px;
-        }
-        .box2{
-            width: 700px;
-            height: 300px;
-            border: 1px solid lightblue;
-            position: absolute;
-            padding: 10px 10px 10px 10px;
-            border-radius: 15px;
-            box-shadow: 5px 5px 5px 5px gray;
-        }
-          
-        /* 여기서부터 헤더, 푸터 스타일 */
-        /*헤더스타일*/
-        .header {
-            display: flex;
-            flex-direction: column;
-            /*top mid bottom을 세로로해서*/
-            justify-content: space-between;
-            /*위 중간 아래로 정렬*/
-            background: url(images/background.jpeg);
-            background-size: cover;
-            /*헤더 이미지*/
-            width: 100%; 
-            height: 360px;
-            
-        }
-
-        .top {
-            display: flex;
-            justify-content: space-between;
-            /*(홈,마이페이지,책추천받기,리뷰페이지,책정보,메신저)-(회원가입)*/
-        }
-
-        .menu {
-            display: inline-flex;
-            /*메뉴들을 가로로 나열*/
-        }
-
-        .menu a {
-            color: white;
-            text-decoration: none;
-            /*a태그 밑줄제거*/
-            font-size: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 46px;
-            /*공통*/
-        }
-
-        /*투명박스는 현재 선택안된 메뉴만 표시*/
-        #home {
-            /*home은 선택된 메뉴 >> 투명박스 제거*/
-            /* background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)); */
-            width: 70px;
-        }
-
-        #my-page,
-        #book-recommend,
-        #book-review {
-            /*5글자 메뉴*/
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-            width: 130px;
-        }
-
-        #book-info,
-        #messenger {
-            /*3글자 메뉴*/
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-            width: 100px;
-        }
-
-        .signup {
-            padding-right: 20px;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-            /*반투명색 박스*/
-            width: 100%;
-            height: 46px;
-        }
-
-        .signup a {
-            color: white;
-            text-decoration: none;
-            /*a태그 밑줄제거*/
-            font-size: 20px;
-            display: flex;
-            justify-content: flex-end;
-            /*우측 끝에 정렬*/
-            align-items: center;
-            /*위아래 중앙정렬*/
-        }
-
-        .signup img {
-            position: relative;
-            top: 3px;
-            margin-left: 10px;
-            border-radius: 50%;
-            /*프로필 이미지 둥글게*/
-        }
-
-        .title {
-            display: flex;
-            justify-content: center;
-            /*좌우 중앙정렬*/
-            align-items: center;
-            /*위아래 중앙정렬*/
-            color: rgb(165, 109, 188);
-        }
-
-        .phrase {
-            color: rgb(165, 109, 188);
-            text-align: center;
-            /*제목 중앙정렬*/
-        }
-
-        .search {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-            /*반투명색 박스*/
-            width: 100%;
-            height: 93px;
-            text-align: center;
-            /*가로방향 중앙정렬*/
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            /*세로방향 중앙정렬*/
-        }
-
-        .search form input {
-            font-size: 16px;
-            width: 700px;
-            height: 41px;
-        }
-
-        .search form button {
-            font-size: 16px;
-            color: white;
-            /*버튼 글자색*/
-            width: 100px;
-            height: 44px;
-            border-radius: 10%;
-            /*버튼둥글게*/
-            background-color: rgb(165, 109, 188);
-            /*버튼색*/
-        }
-
-
-        /*여기서부터 푸터 스타일*/
-        .footer {
-            width: 100%;
-            height: 155px;
-            background-color: rgb(214, 209, 209);
-        }
-
-        .footer a {
-            text-decoration: none;
-            /*a태그 밑줄 제거*/
-            color: black;
-        }
-
-        .footer .top {
-            display: flex;
-            justify-content: left;
-            /*좌측 정렬*/
-            align-items: center;
-            /*위아래 중앙정렬*/
-        }
-
-        .footer .top img {
-            margin: 15px 25px;
-        }
-
-        .footer .bottom {
-            display: flex;
-            justify-content: space-between;
-            /*좌우 띄우고 정렬*/
-            margin: 0px 20px;
-
-        }
-
     </style>
 </head>
 <body>
-    <!--중앙 정렬 태그-->
-    <!-- 헤더 -->
+    <!-- header -->
     <div class="header">
         <div class="top">
             <div class="menu">
                 <a id="home" href="main.html"><img src="images/home.png" alt="home-icon" width="40px"></a>
                 <a id="my-page" href="#">마이페이지</a>
-                <a id="book-recommend" href="#">책추전받기</a>
+                <a id="book-recommend" href="#">책추천받기</a>
                 <a id="book-review" href="#">리뷰페이지</a>
                 <a id="book-info" href="#">책정보</a>
-                <a id="messenger" href="#">메신저</a>
+                <a id="messenger" href="chatlist.html">메신저</a>
             </div>
             <div class="signup">
                 <a id="none-choosed" href="#">
-                    회원가입
+                    홍길동 님
                     <img src="images/profile.png" alt="profile-icon" width="35px">
                 </a>
             </div>
@@ -263,12 +45,11 @@
         <div class="mid">
             <div class="title">
                 <br>
-                <div style="margin-right: 2%;">
+                <div style="margin-right:1%;">
                     <a href="#"><img src="images/book-color.png" alt="book-icon" width="60px" height="65px"></a>
                 </div>
-                
                 <div>
-                    <a href="main.html" style="font-family: 'hanna'; font-size: 40px; color: rgb(165, 109, 188);">&nbsp부크박스(BookBox)</a>                
+                    <a  style="font-family: 'hanna'; font-size: 40px; color: rgb(165, 109, 188);">부크박스(BookBox)</a>
                 </div>
             </div>
             <div class="phrase">
@@ -279,95 +60,253 @@
         <div class="bottom">
             <div class="search">
                 <form action="#">
-                    <input type="text" placeholder=" 찾고싶은 책을 검색해보세요!">
+                    <input type="text" placeholder="   찾고 싶은 책을 검색해보세요!">
                     <button>검색</button>
                 </form>
             </div>
         </div>
     </div>
-    
-    <div class="parent">
-        <div id="left_arrow"><a href="#"><img src="images/main/left-arrow.png" height="50px"></a></div>
-        <div class="box" id="b1" style="background-color: rgb(223, 215, 239);"><a href="#">
-            <p style="font-size: 24px; font-family: 'hanna'; line-height: 10%; color: rgb(51, 106, 142);">이책! 어떨까요?</p>
-            <img src="images/main/book1.png" alt="book1" height="220px"><br>
-            <p style="font-size: 18px; font-family: 'hanna'; line-height: 10%; color: rgb(51, 106, 142);">미움받을 용기</p></a>
-        </div>
-        <div class="box" id="b2" style="background-color: rgb(239, 219, 234);"><a href="#">
-            <p style="font-size: 24px; font-family: 'hanna'; line-height: 10%; color: rgb(173, 100, 202)">화제의 리뷰!</p>
-            <img src="images/main/complaint.png" height="150px">
-            <p style="font-size: 18px; font-family: 'hanna'; line-height: 10%; color: rgb(173, 100, 202)">익명436: 진심으로 열심히 산적이 있는가</p>
-            <p style="font-size: 16px; font-family: 'hanna'; line-height: 100%; color: gray">소설이 아닌 인문학 분야로 참으로 오랜만에<br>느낀점들이 많았다. 이책에서 글쓴이는...</p>
-            </a>
-        </div>
-        <div class="box" id="b3" style="background-color: rgba(241, 196, 15, 0.18);"><a href="#">
-            <p style="font-size: 24px; font-family: 'hanna'; line-height: 10%; color: orange">이달의 인싸</p>
-            <img src="images/main/celebrity.png" alt="book1" height="160px"><br>
-            <p style="font-size: 20px; font-family: 'hanna'; line-height: 0%; color: orange">1등! 책이좋아</p>
-            <p style="font-size: 18px; font-family: 'hanna'; line-height: 120%; color: lightcoral">2.익명4623<br>3.독서광민수</p>
-            </a>
-        </div>
-        <div id="right_arrow"><a href="#"><img src="images/main/right-arrow.png" height="50px"></a></div>
-    </div>
-    <div class="parent2">
-        <div class="img" style="vertical-align: text-bottom;">
-            <img src="images/main/emotions.jpg"></div>
-            <div class="box2" id="q1"><p style="font-size: 50px; line-height: 0%; font-family: 'hanna'; color: rgb(80, 63, 0);"> &nbsp 오늘 나의 </p><p style="font-size: 50px; line-height: 10%; font-family: 'hanna'; color: rgb(80, 63, 0);">&nbsp 기분은 어떤가요?</p>
-                <div id="happy"><img src="images/main/happy.png" height="100px"><br><p style="font-family: 'hanna2'; color: rgb(80, 63, 0); font-size: 20px; line-height: 10%;">기쁨</p></div> 
-                <div id="angry"><img src="images/main/angry.png" height="100px"><br><p style="font-family: 'hanna2'; color: rgb(80, 63, 0); font-size: 20px; line-height: 10%;">화남</p></div>
-                <div id="anx"><img src="images/main/anxiety.png" height="100px"><br><p style="font-family: 'hanna2'; color: rgb(80, 63, 0); font-size: 20px; line-height: 10%;">슬픔</p></div>
-                <div id="worr"><img src="images/main/worried.png" height="100px"><br><p style="font-family: 'hanna2'; color: rgb(80, 63, 0); font-size: 20px; line-height: 10%;">불안</p></div>
+    <!-- /header -->
+
+    <!-- main -->
+    <main>
+        <!-- cardlist -->
+        <div class="section">
+            <input type="radio" name="slide" id="slide01" checked>
+            <input type="radio" name="slide" id="slide02">
+            <input type="radio" name="slide" id="slide03">
+            
+            <div class="slidewrap">
+                <ul class="slidelist" style="font-size: 0;">
+                    <li>
+                        <a>
+                            <label for="slide03" class="left"></label>
+                            <!-- <img src="./images/slide01.jpg"> -->
+                            <div class="cardlist">
+                                <div class="card" style="background-color: #DFD7EF;">
+                                    <h2 class="cardbook">이책 어떨까요?</h2>
+                                    <img src="images/main/book1.png" alt="" width="120">
+                                    <p class="cardbook" style="font-size: 18px;">미움받을 용기</p>
+                                </div>
+                                <div class="card" style="background-color: #EFDBEA;">
+                                    <h2 class="cardreview">화제의 리뷰!</h2>
+                                    <img src="images/rating.png" alt="" width="100">
+                                    <p><br> 진심으로 열심히 산적이 있는가</p>
+                                    <p class="cardreview">소설이 아닌 인문학 분야로는 참으로 오랜만에 느낀점들이 많았다.</p>
+                                </div>
+                                <div class="card" style="background-color: #FCF4D4;">
+                                    <h2 class="cardman">이달의 인싸</h2>
+                                    <img src="images/woman (1).png" alt="">
+                                    <h3 class="cardman">잡학다식 다독가</h3>
+                                </div>
+                            </div>
+                            <label for="slide02" class="right"></label>
+                        </a>
+                    </li> 
+                    <li>
+                        <a>
+                            <label for="slide01" class="left"></label>
+                            <!-- <img src="./images/slide02.jpg"> -->
+                            <div class="cardlist">
+                                <div class="card" style="background-color: #DFD7EF;">
+                                    <h2 class="cardbook">이책 어떨까요?</h2>
+                                    <img src="images/little star.png" alt="" width="120">
+                                    <p class="cardbook" style="font-size: 18px;">작은 별 이지만 빛나고 있어</p>
+                                </div>
+                                <div class="card" style="background-color: #EFDBEA;">
+                                    <h2 class="cardreview">화제의 리뷰!</h2>
+                                    <img src="images/ratings.png" alt="" width="100">
+                                    <p><br> 진심으로 열심히 산적이 있는가</p>
+                                    <p class="cardreview">소설이 아닌 인문학 분야로는 참으로 오랜만에 느낀점들이 많았다.</p>
+                                </div>
+                                <div class="card" style="background-color: #FCF4D4;">
+                                    <h2 class="cardman">이달의 인싸</h2>
+                                    <img src="images/hatman.png" alt="">
+                                    <h3 class="cardman">다독왕</h3>
+                                </div>
+                            </div>
+                            <label for="slide03" class="right"></label>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <label for="slide02" class="left"></label>
+                            <!-- <img src="./images/slide03.jpg"> -->
+                            <div class="cardlist">
+                                <div class="card" style="background-color: #DFD7EF;">
+                                    <h2 class="cardbook">이책 어떨까요?</h2>
+                                    <img src="images/feeling.png" alt="" width="120">
+                                    <p class="cardbook" style="font-size: 18px;">기분이 태도가 되지 않게</p>
+                                </div>
+                                <div class="card" style="background-color: #EFDBEA;">
+                                    <h2 class="cardreview">화제의 리뷰!</h2>
+                                    <img src="images/red_heart.png" alt="" width="100">
+                                    <p><br> 진심으로 열심히 산적이 있는가</p>
+                                    <p class="cardreview">소설이 아닌 인문학 분야로는 참으로 오랜만에 느낀점들이 많았다.</p>
+                                </div>
+                                <div class="card" style="background-color: #FCF4D4;">
+                                    <h2 class="cardman">이달의 인싸</h2>
+                                    <img src="images/girl.png" alt="" width="128">
+                                    <h3 class="cardman">다독다독</h3>
+                                </div>
+                            </div>
+                            <label for="slide01" class="right"></label>
+                        </a>
+                    </li>
+                </ul>
             </div>
-
-        <div class="box2" id="q2">
-            <p style="font-size: 50px; font-family: 'hanna'; text-align: right; color: rgb(80, 63, 0); margin:10px;"> 무엇이 나를<br>슬프게 했나요?</p>
-            <div id="family"><img src="images/main/family.png" height="100px"><br><p style="font-family: 'hanna2'; color: rgb(80, 63, 0); font-size: 20px; line-height: 10%;">가족</p></div> 
-            <div id="friend"><img src="images/main/friend.png" height="100px"><br><p style="font-family: 'hanna2'; color: rgb(80, 63, 0); font-size: 20px; line-height: 10%;">친구</p></div>
-            <div id="boss"><img src="images/main/boss.png" height="100px"><br><p style="font-family: 'hanna2'; color: rgb(80, 63, 0); font-size: 20px; line-height: 10%;">상사</p></div>
-            <div id="test"><img src="images/main/test.png" height="100px"><br><p style="font-family: 'hanna2'; color: rgb(80, 63, 0); font-size: 20px; line-height: 10%;">시험</p></div>    
-            <div id="accident"><img src="images/main/accident.png" height="100px"><br><p style="font-family: 'hanna2'; color: rgb(80, 63, 0); font-size: 20px; line-height: 10%;">사고</p></div> 
         </div>
+        <!-- /cardlist -->
 
-        <div class="box2" id="q3">
-            <p style="font-size: 50px; font-family: 'hanna'; color: rgb(80, 63, 0); margin:10px;">그 사람에게<br>느낀 감정은?</p>
-            <div id="disappointed"><img src="images/main/disappointed.png" height="100px"><br><p style="font-family: 'hanna2'; color: rgb(80, 63, 0); font-size: 20px; line-height: 10%;">실망</p></div> 
-            <div id="sad"><img src="images/main/sad.png" height="100px"><br><p style="font-family: 'hanna2'; color: rgb(80, 63, 0); font-size: 20px; line-height: 10%;">비통</p></div>
-            <div id="betrayal"><img src="images/main/betrayal.png" height="100px"><br><p style="font-family: 'hanna2'; color: rgb(80, 63, 0); font-size: 20px; line-height: 10%;">배신</p></div>
-            <div id="unfairness"><img src="images/main/unfairness.png" height="100px"><br><p style="font-family: 'hanna2'; color: rgb(80, 63, 0); font-size: 20px; line-height: 10%;">억울</p></div>    
-            <div id="jealousy"><img src="images/main/jealousy.png" height="100px"><br><p style="font-family: 'hanna2'; color: rgb(80, 63, 0); font-size: 20px; line-height: 10%;">질투</p></div>
-
-        </div>
-        <div class="box2" id="button"><a href="#" style="font-size: 40px; color: rgba(80, 63, 0, 0.8); font-family: 'jua';">책 찾기</a></div>
-    </div>
-    
-            <!-- 푸터 -->
-            <div class="footer">
-                <div class="top">
-                    <div class="footer-icon">
-                        <img src="images/book-nonecolor.png" alt="book-icon" width="85">
+        <!-- emotion form -->
+        
+        <div class="formcontainer">
+            <div><img src="images/main/emotions.jpg" ></div>
+            <!-- first -->
+            <div class="emotionform" id="first">
+                <input type="radio" name="emotions" id="em01">
+                <input type="radio" name="emotions" id="em02">
+                <input type="radio" name="emotions" id="em03">
+                <input type="radio" name="emotions" id="em04">
+                <input type="radio" name="emotions" id="em05">
+                <h1>오늘 나의 <br>기분은 어떤가요?</h1>
+                <div class="emotionicon">
+                    <div>
+                        <label id="happy" for="em01"class="icon"></label>
+                        <label for="em01" class="select"></label>
+                        <p>기쁨</p>
                     </div>
-                    <div class="footer-text">
-                        <div class="footer-phrase">당신의 상황에 맞는 책 추천 서비스</div>
-                        <div class="footer-title">
-                            <h1>부크박스(BookBox)</h1>
-                        </div>
+                    <div>
+                        <label id="angry" for="em02" class="icon"></label>
+                        <label for="em02" class="select"></label>
+                        <p>화남</p>
+                    </div>
+                    <div>
+                        <label id="sad" for="em03" class="icon"></label>
+                        <label for="em03" class="select"></label>
+                        <p>슬픔</p>
+                    </div>
+                    <div>
+                        <label id="anx" for="em04" class="icon"></label>
+                        <label for="em04" class="select"></label>
+                        <p>불안</p>
+                    </div>
+                    <div>
+                        <label id="dep" for="em05" class="icon"></label>
+                        <label for="em05" class="select"></label>
+                        <p>우울</p>
                     </div>
                 </div>
-                <div class="bottom">
-                    <div class="bottom-left">
-                        <a href="#">회사소개</a> |
-                        <a href="#">인사채용</a> |
-                        <a href="#">제휴제안</a> |
-                        <a href="#">이용약관</a> |
-                        <a href="#">개인정보처리방침</a> |
-                        <a href="#">청소년보호정책</a> |
-                        <a href="#">고객센터</a>
+            </div>
+            <!-- second -->
+            <div class="emotionform" id="second">
+                <input type="radio" name="cause" id="ca01">
+                <input type="radio" name="cause" id="ca02">
+                <input type="radio" name="cause" id="ca03">
+                <input type="radio" name="cause" id="ca04">
+                <input type="radio" name="cause" id="ca05">
+                <h1 style="text-align: right;">무엇이 나를 <br>슬프게 했나요?</h1>
+                <div class="emotionicon">
+                    <div>
+                        <label id="family" for="ca01"class="icon"></label>
+                        <label for="ca01" class="select"></label>
+                        <p>가족</p>
                     </div>
-                    <div class="bottom-right">
-                        Copyright ⓒ LLkmu Corp. All Rights Reserved.
+                    <div>
+                        <label id="friends" for="ca02" class="icon"></label>
+                        <label for="ca02" class="select"></label>
+                        <p>친구</p>
+                    </div>
+                    <div>
+                        <label id="upper" for="ca03" class="icon"></label>
+                        <label for="ca03" class="select"></label>
+                        <p>회사</p>
+                    </div>
+                    <div>
+                        <label id="exam" for="ca04" class="icon"></label>
+                        <label for="ca04" class="select"></label>
+                        <p>시험</p>
+                    </div>
+                    <div>
+                        <label id="accid" for="ca05" class="icon"></label>
+                        <label for="ca05" class="select"></label>
+                        <p>사고</p>
                     </div>
                 </div>
             </div>
+            <!-- third -->
+            <div class="emotionform" id="third">
+                <input type="radio" name="feeling" id="feel01">
+                <input type="radio" name="feeling" id="feel02">
+                <input type="radio" name="feeling" id="feel03">
+                <input type="radio" name="feeling" id="feel04">
+                <input type="radio" name="feeling" id="feel05">
+                <h1>그 사람에게 <br>느낀 감정은?</h1>
+                <div class="emotionicon">
+                    <div>
+                        <label id="feelA" for="feel01"class="icon"></label>
+                        <label for="feel01" class="select"></label>
+                        <p>실망</p>
+                    </div>
+                    <div>
+                        <label id="feelB" for="feel02" class="icon"></label>
+                        <label for="feel02" class="select"></label>
+                        <p>비통</p>
+                    </div>
+                    <div>
+                        <label id="feelC" for="feel03" class="icon"></label>
+                        <label for="feel03" class="select"></label>
+                        <p>배신</p>
+                    </div>
+                    <div>
+                        <label id="feelD" for="feel04" class="icon"></label>
+                        <label for="feel04" class="select"></label>
+                        <p>억울</p>
+                    </div>
+                    <div>
+                        <label id="feelE" for="feel05" class="icon"></label>
+                        <label for="feel05" class="select"></label>
+                        <p>질투</p>
+                    </div>
+                </div>
+            </div>
+            <!-- submit -->
+            <a href="result.html" style="text-decoration: none;"><div id="submit">책찾기</div></a>
+        </div>
+        <!-- /emotion form -->
 
+    </main>
+    <!-- footer -->
+    <div class="footer">
+        <div class="top">
+            <div class="footer-icon">
+                <img src="images/book-nonecolor.png" alt="book-icon" width="85">
+            </div>
+            <div class="footer-text">
+                <div class="footer-phrase">당신의 상황에 맞는 책 추천 서비스</div>
+                <div class="footer-title">
+                    <h1>부크박스(BookBox)</h1>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bottom-left">
+                <a href="#">회사소개</a> |
+                <a href="#">인사채용</a> |
+                <a href="#">제휴제안</a> |
+                <a href="#">이용약관</a> |
+                <a href="#">개인정보처리방침</a> |
+                <a href="#">청소년보호정책</a> |
+                <a href="#">고객센터</a>
+            </div>
+            <div class="bottom-right">
+                Copyright ⓒ LLkmu Corp. All Rights Reserved.
+            </div>
+        </div>
+    </div>
+
+    <!-- /footer -->
+    
+           
 </body>
 </html>
