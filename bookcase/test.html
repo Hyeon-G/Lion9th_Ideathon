@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+    <style>
+        .section input[id*="slide"]{
+            display: none;
+        }
+        .section .slidewrap{
+            background-color: cornflowerblue;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .section .slidelist {
+            white-space: nowrap;
+            font-size: 0;
+        }
+        .section .slidelist > li {
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            transition: all 0.5s;
+        }
+        .section .slidelist > li > a{
+            display: block;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid red;
+        }
+        .section .slidelist > li > a div{
+            /* width: 100%; */
+            /* background-color: coral; */
+        }
+        .section .slidelist > li > a img{
+            /* width: 100%; */
+            /* background-color: coral; */
+        }
+        .section .slidelist label{
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-50%);
+            padding:50px;
+            cursor: pointer;
+        }
+        .section .slidelist .left{
+            left: -20px;
+            background:url(./images/left-arrow.png) center center/100% no-repeat;
+        }
+        .section .slidelist .right{
+            right: -20px;
+            background: url(./images/right-arrow.png) center center / 100% no-repeat;
+        }
+        .section input[id="slide01"]:checked~ .slidewrap .slidelist > li{transform: translateX(0%);}
+        .section input[id="slide02"]:checked~ .slidewrap .slidelist > li{transform: translateX(-100%);}
+        .section input[id="slide03"]:checked~ .slidewrap .slidelist > li{transform: translateX(-200%);}
+
+    </style>
+</head>
+<body>
+    <div class="section">
+        <input type="radio" name="slide" id="slide01" checked>
+        <input type="radio" name="slide" id="slide02">
+        <input type="radio" name="slide" id="slide03">
+        
+        <div class="slidewrap">
+            <ul class="slidelist" style="padding-left: 0;">
+                <li>
+                    <a>
+                        <label for="slide03" class="left"></label>
+                        <!-- <img src="./images/slide01.jpg"> -->
+                        <div class="cardlist">
+                            <div class="card" style="background-color: #DFD7EF;">
+                                <h3>이책 어떨까요?</h3>
+                                <img src="images/book_kindergarten.jpg" alt="" width="130">
+                                <p>책 제목</p>
+                            </div>
+                            <div class="card" style="background-color: #EFDBEA;">
+                                <h3>화제의 리뷰!</h3>
+                                <img src="images/rating.png" alt="">
+                                <p>소설이 아닌 인문학 분야로는 참으로 오랜만에 몰입을...</p>
+                            </div>
+                            <div class="card" style="background-color: #FCF4D4;">
+                                <h3>이달의 인싸</h3>
+                                <img src="images/woman (1).png" alt="">
+                                <p>잡학다식 다독가</p>
+                            </div>
+                        </div>
+                        <label for="slide02" class="right"></label>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <label for="slide01" class="left"></label>
+                        <!-- <img src="./images/slide02.jpg"> -->
+                        <div class="cardlist">
+                            <div class="card" style="background-color: #DFD7EF;">
+                                <h3>이책 어떨까요?</h3>
+                                <img src="images/book_kindergarten.jpg" alt="" width="130">
+                                <p>책 제목</p>
+                            </div>
+                            <div class="card" style="background-color: #EFDBEA;">
+                                <h3>화제의 리뷰!</h3>
+                                <img src="images/rating.png" alt="">
+                                <p>소설이 아닌 인문학 분야로는 참으로 오랜만에 몰입을...</p>
+                            </div>
+                            <div class="card" style="background-color: #FCF4D4;">
+                                <h3>이달의 인싸</h3>
+                                <img src="images/woman (1).png" alt="">
+                                <p>잡학다식 다독가</p>
+                            </div>
+                        </div>
+                        <label for="slide03" class="right"></label>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <label for="slide02" class="left"></label>
+                        <!-- <img src="./images/slide03.jpg"> -->
+                        <div class="cardlist">
+                            <div class="card" style="background-color: #DFD7EF;">
+                                <h3>이책 어떨까요?</h3>
+                                <img src="images/book_kindergarten.jpg" alt="" width="130">
+                                <p>책 제목</p>
+                            </div>
+                            <div class="card" style="background-color: #EFDBEA;">
+                                <h3>화제의 리뷰!</h3>
+                                <img src="images/rating.png" alt="">
+                                <p>소설이 아닌 인문학 분야로는 참으로 오랜만에 몰입을...</p>
+                            </div>
+                            <div class="card" style="background-color: #FCF4D4;">
+                                <h3>이달의 인싸</h3>
+                                <img src="images/woman (1).png" alt="">
+                                <p>잡학다식 다독가</p>
+                            </div>
+                        </div>
+                        <label for="slide01" class="right"></label>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="cardlist">
+        <div class="card" style="background-color: #DFD7EF;">
+            <h3>이책 어떨까요?</h3>
+            <img src="images/book_kindergarten.jpg" alt="" width="130">
+            <p>책 제목</p>
+        </div>
+        <div class="card" style="background-color: #EFDBEA;">
+            <h3>화제의 리뷰!</h3>
+            <img src="images/rating.png" alt="">
+            <p>소설이 아닌 인문학 분야로는 참으로 오랜만에 몰입을...</p>
+        </div>
+        <div class="card" style="background-color: #FCF4D4;">
+            <h3>이달의 인싸</h3>
+            <img src="images/woman (1).png" alt="">
+            <p>잡학다식 다독가</p>
+        </div>
+    </div>
+</body>
+</html>
